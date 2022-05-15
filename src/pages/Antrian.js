@@ -21,10 +21,14 @@ export default function Antrian() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="Antrian">
-      {data?.doctor.map((item) => (
-        <CardAntrian item={item} />
-      ))}
+    <div>
+      <Grid container>
+        {data?.doctor.map((item) => (
+          <Grid item>
+            <CardAntrian item={item} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }
